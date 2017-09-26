@@ -1,6 +1,6 @@
 # PesaBot-py
 
-PesaBot Python API Wrapper (Beta) for [PesaBot](https://pesabot.com) official [API](https://pesabot.com/api/docs/)
+PesaBot Python API Client (Beta) for [PesaBot](https://pesabot.com) official [API](https://pesabot.com/api/docs/)
 
 ## Get started
 
@@ -11,6 +11,8 @@ PesaBot Python API Wrapper (Beta) for [PesaBot](https://pesabot.com) official [A
 We use basic auth, so make sure you grab your email and password i.e the one you used during registration.
 
 ## Example
+
+    from pesabot import PesaBot
 
     pb = PesaBot({'email': 'your_email', 'password': 'your_password'})
 
