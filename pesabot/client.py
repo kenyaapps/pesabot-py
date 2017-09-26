@@ -5,7 +5,9 @@ BASE_URL = 'https://pesabot.com/api/v1/'
 
 class Client(object):
     def __init__(self, email, password):
-        self.auth = HTTPBasicAuth(email, password)
+        self.auth = None
+        if email and password:
+            self.auth = HTTPBasicAuth(email, password)
 
     def call(self, path, method='GET', payload={}):
         if method == 'POST':
