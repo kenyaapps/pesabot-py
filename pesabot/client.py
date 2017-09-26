@@ -11,7 +11,7 @@ class Client(object):
 
     def call(self, path, method, payload={}):
         if method == 'POST':
-            res = requests.post(BASE_URL+path, data=payload, auth=self.auth)
+            res = requests.post(BASE_URL+path, json=payload, auth=self.auth)
         else:
             res = requests.get(BASE_URL+path, auth=self.auth)
         return {'data': res.json(), 'status': res.status_code} 
