@@ -9,7 +9,7 @@ class Client(object):
         if email and password:
             self.auth = HTTPBasicAuth(email, password)
 
-    def call(self, path, method='GET', payload={}):
+    def call(self, path, method, payload={}):
         if method == 'POST':
             res = requests.post(BASE_URL+path, data=payload, auth=self.auth)
         else:
