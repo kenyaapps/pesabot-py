@@ -1,7 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 
-BASE_URL = 'https://pesabot.com/api/v1/'
+BASE_URL = 'http://pesabot.com/api/v1/'
 
 class Client(object):
     def __init__(self, email, password):
